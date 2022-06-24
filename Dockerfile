@@ -1,8 +1,11 @@
 FROM python:alpine
 
-RUN apk add --no-cache git && rm -r *
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
-RUN git clone https://github.com/AmirulAndalib/railwaysaxx .
+RUN apk add --no-cache git
+
+RUN git clone https://github.com/AmirulAndalib/railwaysaxx auto && cd auto && cp -r * /usr/src/app
 
 COPY ./content /workdir/
 
