@@ -2,7 +2,7 @@ FROM python:alpine
 
 RUN apk add --upgrade git 
 
-RUN git clone https://github.com/AmirulAndalib/railwaysaxx
+RUN git clone https://github.com/AmirulAndalib/railwaysaxx auto
 
 RUN cd auto && cp ./content /workdir/
 
