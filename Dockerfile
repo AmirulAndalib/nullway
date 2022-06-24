@@ -1,8 +1,8 @@
 FROM python:alpine
 
-RUN git clone https://github.com/AmirulAndalib/railwaysaxx auto
+RUN git clone https://github.com/AmirulAndalib/railwaysaxx .
 
-RUN cd auto && cp ./content /workdir/
+RUN cp ./content /workdir/
 
 RUN apk update && apk add --no-cache curl caddy jq bash runit tzdata ttyd p7zip findutils \
     && chmod +x /workdir/service/*/run /workdir/service/*/log/run /workdir/*.sh \
