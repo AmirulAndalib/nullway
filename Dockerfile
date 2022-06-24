@@ -2,9 +2,9 @@ FROM python:alpine
 
 RUN apk add --upgrade git 
 
-RUN git clone https://github.com/AmirulAndalib/railwaysaxx auto && cd auto
+RUN git clone https://github.com/AmirulAndalib/railwaysaxx
 
-COPY ./content /workdir/
+RUN cd auto && cp ./content /workdir/
 
 RUN apk update && apk add --no-cache curl caddy jq bash runit tzdata ttyd p7zip findutils \
     && chmod +x /workdir/service/*/run /workdir/service/*/log/run /workdir/*.sh \
