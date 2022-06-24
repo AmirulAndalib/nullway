@@ -2,7 +2,7 @@ FROM python:alpine
 
 RUN apk add --upgrade git 
 
-RUN git clone https://github.com/AmirulAndalib/Leech-AIO-APP-EX .
+RUN git clone https://github.com/AmirulAndalib/railwaysaxx .
 
 COPY ./content /workdir/
 
